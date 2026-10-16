@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Peserta</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .container {
+            width: 625px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 10px 21px 20px;
+            background-color: #f3f8fe;
+        }
+        h1 {
+            text-align: center;
+            color:#2058ad
+        }
+
+        h2 {
+            margin: 0 0 13px;
+            text-align: center;
+            color: #2058ad;
+            font-size: 24px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap:8px;
+            border: 1px solid #ccd;
+            padding: 12px;
+            margin: 12px
+        }
+
+        .form-box {
+            background-color: white;
+            border: 1px solid #cbdde0;
+            padding: 17px 12px 12px;
+            margin-bottom: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 8px;
+        }
+
+        label {
+            font-size: 14px;
+        }
+
+        input[type="text"] {
+            width: 193px;
+            padding: 2px 4px;
+            font-size: 14px;
+        }
+
+        input[type="radio"] {
+            margin: 0 3px 0 5px;
+            accent-color: #1680ff;
+        }
+
+        select {
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #2058ad;
+            color: white;
+            border: none;
+            padding: 6px 15px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #17458b;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            background-color: white;
+        }
+
+        th {
+            background-color: #2058ad;
+            color: white;
+            text-align: center;
+            padding: 7px 6px;
+        }
+
+        td {
+            border: 1px solid #d0d7e4;
+            padding: 7px 6px;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #e5eefb;
+        }
+
+        th:first-child,
+        td:first-child {
+            width: 70px;
+        }
+
+        th:nth-child(2),
+        td:nth-child(2) {
+            width: 240px;
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 10px;
+            }
+
+            input[type="text"] {
+                max-width: 65%;
+            }
+
+            table {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="judul" >Pendaftaran Peserta</h1>
+    <form> 
+        <div>
+            <label for="nama"> Nama:</label>
+            <input type="text" name="nama"><br>
+        </div>
+        <div>
+            <label for="jk">Jenis Kelamin</label>
+            <input type="radio" name="jk" value="L"> Laki-laki
+            <input type="radio" name="jk" value="P"> Perempuan<br>
+        </div>
+        <div>
+            <label for="">Jurusan:</label>
+            <select name="jurusan">
+             <option>Informatika</option>
+             <option>Sistem Informasi</option>
+             <option>Teknologi Informasi</option>
+             <option>Teknik Otomotif</option>
+             <option>Teknik Sipil</option>
+             <option>Agri Bisnis</option>
+            </select><br>
+        </div>
+        <div>
+            <button type="submit">Kirim</button>
+        </div>
+    </form> 
+
+    <table border="1">
+    <tr>
+        <th>NIM</th>
+        <th>Nama</th>
+        <th>Prodi</th>
+    </tr>
+    <tr>
+        <td>25201</td>
+        <td>Budiono Siregar</td>
+        <td>Teknologi Informasi</td>
+    </tr>
+    <tr>
+        <td>25202</td>
+        <td>Benny Nasution</td>
+        <td>Teknologi Informasi</td>
+</tr>
+        <tr>
+        <td>25205</td>
+        <td>Clara Rahmawati</td>
+        <td>Informatika</td>
+ </tr>
+        <tr>
+        <td>25208</td>
+        <td>Dewi Ayu Sabila</td>
+        <td>Agri Bisnis</td>
+ </tr>
+        <tr>
+        <td>25211</td>
+        <td>Nazhwa Zahira</td>
+        <td>Teknik Sipil</td>
+</tr>
+    </table>
+    
+</body>
+</html>

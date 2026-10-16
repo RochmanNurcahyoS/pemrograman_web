@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+
+    <!-- CSS tampilan halaman -->
+    <style>
+        /* Mengatur dasar halaman */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Class untuk judul halaman */
+        .judul {
+            color: #2dd81d;
+            text-align: center;
+        }
+
+        /* Mengatur kotak form dan tabel */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border: 1px solid #cccccc;
+            border-radius: 10px;
+        }
+
+        /* Mengatur label dan input form */
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #999999;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Mengatur radio dan checkbox */
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        /* Mengatur tombol */
+        button {
+            background-color: #2dd81d;
+            color: white;
+            padding: 10px 18px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2dd81d;
+        }
+
+        /* Mengatur tabel data mahasiswa */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #555555;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2dd81d;
+            color: white;
+        }
+
+        /* Warna baris tabel */
+        tbody tr:nth-child(even) {
+            background-color: #edffea;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Judul halaman -->
+        <h1 class="judul">Form Data Mahasiswa</h1>
+        <p>Isi data mahasiswa dengan benar.</p>
+
+        <!-- Form input data mahasiswa -->
+        <form action="#" method="post">
+
+            <!-- Input text untuk nama -->
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <!-- Input email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Input radio untuk jenis kelamin -->
+            <label>Jenis Kelamin:</label>
+            <input type="radio" id="laki" name="jk" value="L">
+            <label for="laki" style="display:inline;">Laki-laki</label>
+
+            <input type="radio" id="perempuan" name="jk" value="P">
+            <label for="perempuan" style="display:inline;">Perempuan</label>
+
+            <!-- Input checkbox untuk hobi -->
+            <label>Hobi:</label>
+            <input type="checkbox" id="membaca" name="hobi" value="baca">
+            <label for="membaca" style="display:inline;">Membaca</label>
+
+            <input type="checkbox" id="olahraga" name="hobi" value="Olahraga">
+            <label for="olahraga" style="display:inline;">Olahraga</label>
+
+            <input type="checkbox" id="musik" name="hobi" value="Musik">
+            <label for="musik" style="display:inline;">Musik</label>
+
+            <!-- Dropdown untuk memilih program studi -->
+            <label for="prodi">Program Studi:</label>
+            <select id="prodi" name="prodi" required>
+                <option value="">-- Pilih Program Studi --</option>
+                <option value="Informatika">Informatika</option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+                <option value="Manajemen">Manajemen</option>
+                <option value="Akuntansi">Akuntansi</option>
+            </select>
+
+            <!-- Textarea untuk alamat -->
+            <label for="alamat">Alamat:</label>
+            <textarea id="alamat" name="alamat" rows="4"
+             "></textarea>
+
+            <!-- Tombol form -->
+            <button type="submit">Kirim Data</button>
+            <button type="reset">Reset</button>
+        </form>
+
+        <!-- Garis pemisah antara form dan tabel -->
+        <hr style="margin-top:30px;">
+
+        <!-- Tabel berisi data lima mahasiswa -->
+        <h2>Daftar Data Mahasiswa</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <!-- Colspan menggabungkan lima kolom -->
+                    <th colspan="4">Data Mahasiswa</th>
+                </tr>
+                <tr>
+                    <th>NIM</th>
+                    <th>Nama</th>
+                    <th>Prodi</th>
+                    <th>IPK</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>231001</td>
+                    <td>Andi Laluan</td>
+                    <td>Informatika</td>
+                    <td>3.75</td>
+                </tr>
+                <tr>
+                    <td>231005</td>
+                    <td>Budiono Siregar</td>
+                    <td>Sistem Informasi</td>
+                    <td>3.60</td>
+                </tr>
+                <tr>
+                    <td>231023</td>
+                    <td>Benny Nasution</td>
+                    <td>Manajemen</td>
+                    <td>3.85</td>
+                </tr>
+                <tr>
+                    <td>231029</td>
+                    <td>Dewi Roro Sartika</td>
+                    <td>Akuntansi</td>
+                    <td>3.50</td>
+                </tr>
+                <tr>
+                    <td>231055</td>
+                    <td>Nashwa Zahira</td>
+                    <td>Informatika</td>
+                    <td>3.90</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
